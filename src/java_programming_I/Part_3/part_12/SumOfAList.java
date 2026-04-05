@@ -19,7 +19,7 @@ public class SumOfAList {
 
         //Using a for-each Loop
         int sum = 0;
-        for(int x : numbers)
+        for(var x : numbers) // int x : numbers
         {
             sum +=x;
         }

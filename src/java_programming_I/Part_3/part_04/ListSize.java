@@ -18,6 +18,6 @@ public class listSize {
             names.add(name);
         }
 
-        System.out.println(names.size());
+        System.out.println("In total: " + names.size());
     }
 }
