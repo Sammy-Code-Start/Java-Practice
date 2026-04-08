@@ -1,0 +1,25 @@
+package java_programming_I.Part_3.part_25;
+import java.util.Scanner;
+public class AVClub {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        while(true)
+        {
+            String string = sc.nextLine();
+            if(string.equals(""))
+            {
+                break;
+            }
+
+            String[] split_string = string.split(" ");
+            for(String x : split_string)
+            {
+                if(x.contains("av"))
+                {
+                    System.out.println(x);
+                }
+            }
+        }
+    }
+}
