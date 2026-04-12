@@ -51,5 +51,42 @@ public class PaymentCard {
         double amt = Double.valueOf(sc.nextLine());
         card.addMoney(amt);
         System.out.println(card);
+
+        // Part 5 - the addMoney() function was made to not add any negative value
+
+        // part 6
+        /*Write code in the main method of the MainProgram class that contains the following sequence of events:
+            Create Paul's card. The opening balance of the card is 20 euros
+            Create Matt's card. The opening balance of the card is 30 euros
+            Paul eats heartily
+            Matt eats affordably
+            The cards' values are printed (each on its own line, with the cardholder name at the beginning of it)
+            Paul tops up 20 euros
+            Matt eats heartily
+            The cards' values are printed (each on its own line, with the cardholder name at the beginning of it)
+            Paul eats affordably
+            Paul eats affordably
+            Matt tops up 50 euros
+            The cards' values are printed (each on its own line, with the cardholder name at the beginning of it)
+         */
+        System.out.print("Enter the opening Balance for Paul's Card: ");
+        double paul_bal = Double.valueOf(sc.nextLine());
+        PaymentCard Paul_Card = new PaymentCard(paul_bal);
+        System.out.print("Enter the opening Balance for Matt's Card: ");
+        double matt_bal = Double.valueOf(sc.nextLine());
+        PaymentCard Matt_Card = new PaymentCard(matt_bal);
+        Paul_Card.eatHeartily();
+        Matt_Card.eatAffordably();
+        System.out.println("Paul: " + Paul_Card);
+        System.out.println("Matt: " + Matt_Card);
+        Paul_Card.addMoney(20);
+        Matt_Card.eatHeartily();
+        System.out.println("Paul: " + Paul_Card);
+        System.out.println("Matt: " + Matt_Card);
+        Paul_Card.eatAffordably();
+        Paul_Card.eatAffordably();
+        Matt_Card.addMoney(50);
+        System.out.println("Paul: " + Paul_Card);
+        System.out.println("Matt: " + Matt_Card);
     }
 }
